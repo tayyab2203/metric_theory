@@ -1086,6 +1086,8 @@ body {
 
 
 
+/* simple Modal */
+
     .custom-modal .modal-content {
       border-radius: 15px;
       padding: 20px;
@@ -1099,7 +1101,7 @@ body {
     }
 
     .close-btn {
-      background-color: #ff66b2;
+      background-color: #005fdb;
       border: none;
       color: white;
       font-weight: bold;
@@ -1155,7 +1157,7 @@ body {
     }
 
     .submit-btn {
-      background-color: #ff33cc;
+      background-color: #005fdb;
       color: white;
       border: none;
       width: 100%;
@@ -1165,6 +1167,6 @@ body {
     }
 
     .submit-btn:hover {
-      background-color: #e600ac;
+      background-color: #044191;
     }
   
