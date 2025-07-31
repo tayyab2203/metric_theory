@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <style>
+      .offcanvas-bottom-custom {
+        height: 250px;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+      }
+
+      .offcanvas-backdrop.show {
+        opacity: 0.5;
+      }
+
+      .btn-submit {
+        background-color: rgb(153, 59, 246);
+        color: white;
+        border-radius: 24px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div
+      class="row w-100 d-flex flex-row justify-content-center align-items-center mx-auto">
+      <div class="col-lg-8 col-md-12 col-sm-12 col-12 p-0">
+        <main class="container-lg px-md-5 px-0 mx-auto">
+          <!-- Navbar -->
+          <nav
+            class="navbar navbar-expand-lg p-0"
+            style="background-color: var(--navbar-bg)"
+          >
+            <div class="container-fluid">
+              <div class="navbar-nav">
+                <a
+                  class="nav-item nav-link"
+                  style="color: var(--navbar-text)"
+                  href="./index.html"
+                >
+                  <i class="fa-solid fa-chevron-left"></i>
+                </a>
+              </div>
+              <div
+                class="navbar-brand text-white text-center flex-grow-1"
+                style="font-size: 20px; font-weight: bold"
+              >
+                My
+              </div>
+            </div>
+          </nav>
+
+          <!-- Profile Section -->
+          <div
+            class="profile-section p-3"
+            style="background-color: var(--background-color)"
+          >
+            <div
+              class="mt-2 mx-auto p-3 d-flex flex-column position-relative rounded-top-5 rounded-4"
+              style="
+                background-image: url('./assets/images/profile_bg.png');
+                background-size: cover;
+              "
+            >
+              <div
+                class="vip-badge position-absolute end-0 top-0 text-center text-white m-3"
+              >
+                <img
+                  src="https://bigw-in1.oss-ap-northeast-1.aliyuncs.com/rcc/1683135444978440962.png"
+                  alt="VIP Badge"
+                  style="width: 4rem; height: 4rem"
+                />
+                <div class="text fs-6 fw-bold">VIP2</div>
+              </div>
+              <div class="profile-info d-flex p-3">
+                <div class="me-3 rounded-circle overflow-hidden">
+                  <img
+                    src="./assets/images/user (1).png"
+                    class="img-fluid"
+                    width="50"
+                    alt="User Image"
+                  />
+                </div>
+                <div
+                  class="text-container d-flex flex-column justify-content-center"
+                >
+                  <div class="name text-white fs-4 fw-semibold">Kaia3055</div>
+                  <div
+                    class="invitation-code text-white mt-1"
+                    style="font-size: 15px"
+                  >
+                    Invitation Code:
+                    <span class="fw-bold text-white">CLF4AU</span>
+                  </div>
+                </div>
+              </div>
+              <div class="credit-score">
+                <div class="d-flex justify-content-between">
+                  <div
+                    class="text-muted text-xs"
+                    style="color: white !important"
+                  >
+                    Credit Score:
+                  </div>
+                  <div class="text-xs text-white font-semibold">100%</div>
+                </div>
+                <div
+                  class="progress mt-2"
+                  style="height: 8px; border-radius: 4px"
+                >
+                  <div
+                    class="progress-bar"
+                    style="width: 100%; background-color: #fbdc67"
+                  ></div>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between mt-3 px-3">
+                <div
+                  class="d-flex flex-column align-items-center justify-content-center"
+                >
+                  <div class="fs-6 fw-bold" style="color: #dddddd">
+                    Wallet Amount
+                  </div>
+                  <div
+                    class="amount text-white fs-5 fw-semibold mt-1"
+                    style="color: #dddddd"
+                  >
+                    -290.12
+                    <span class="opacity-90 ms-1">USD</span>
+                  </div>
+                </div>
+                <div
+                  class="border-end border-2"
+                  style="height: 2rem; background-color: #666666 !important"
+                ></div>
+                <div
+                  class="d-flex flex-column align-items-center justify-content-center"
+                >
+                  <div class="fs-6 fw-bold" style="color: #dddddd">
+                    Commission
+                  </div>
+                  <div
+                    class="amount text-white fs-5 fw-semibold mt-1"
+                    style="color: #dddddd"
+                  >
+                    0 <span class="opacity-90 ms-1">USD</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Financial Section -->
+            <div class="financial-section-container mt-4 mb-4">
+              <div class="mt-4 mb-2 text-black fs-5 fw-bold">My Financial</div>
+              <ul class="list-group">
+                <a href="./deposit.html" class="text-decoration-none text-dark">
+                  <li
+                    class="list-group-item d-flex align-items-center justify-content-between"
+                    style="cursor: pointer"
+                  >
+                    <div class="d-flex align-items-center">
+                      <img
+                        src="./assets/images/Deposit.png"
+                        class="me-3"
+                        style="width: 20px; height: 20px"
+                        alt="Deposit Icon"
+                      />
+                      Deposit
+                    </div>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </li>
+                </a>
+
+                <a
+                  href="./withdraw.html"
+                  class="text-decoration-none text-dark"
+                >
+                  <li
+                    class="list-group-item d-flex align-items-center justify-content-between"
+                    style="cursor: pointer"
+                  >
+                    <div class="d-flex align-items-center">
+                      <img
+                        src="./assets/images/Withdrawal.png"
+                        class="me-3"
+                        style="width: 20px; height: 20px"
+                        alt="Withdraw Icon"
+                      />
+                      Withdraw
+                    </div>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </li>
+                </a>
+              </ul>
+
+              <!-- Detail Section -->
+              <div class="mt-4 mb-2 text-black fs-5 fw-bold">My Detail</div>
+              <ul class="list-group">
+                <a
+                  href="./profile-item.html"
+                  class="text-decoration-none text-dark"
+                >
+                  <li
+                    class="list-group-item d-flex align-items-center justify-content-between"
+                    style="cursor: pointer"
+                  >
+                    <div class="d-flex align-items-center">
+                      <img
+                        src="./assets/images/EditPersonal1.png"
+                        class="me-3"
+                        style="width: 20px; height: 20px"
+                        alt="Deposit Icon"
+                      />
+                      Personal Information
+                    </div>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </li>
+                </a>
+
+                <!-- Payment Modal Trigger -->
+                <li
+                  class="list-group-item d-flex align-items-center justify-content-between"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#transactionModal"
+                  style="cursor: pointer"
+                >
+                  <div class="d-flex align-items-center">
+                    <img
+                      src="./assets/images/Deposit.png"
+                      class="me-3"
+                      style="width: 20px; height: 20px"
+                      alt="Withdraw Icon"
+                    />
+                    Payment Methods
+                  </div>
+                  <i class="fa-solid fa-chevron-right"></i>
+                </li>
+              </ul>
+
+              <div class="mt-4 mb-2 text-black fs-5 fw-bold">Other</div>
+              <ul class="list-group">
+                <li
+                  class="list-group-item d-flex align-items-center justify-content-between"
+                  onclick="openServicePopup()"
+                  style="cursor: pointer"
+                >
+                  <div class="d-flex align-items-center">
+                    <img
+                      src="./assets/images/ContactUs1.png"
+                      class="me-3"
+                      style="width: 20px; height: 20px"
+                      alt="Deposit Icon"
+                    />Contact Us
+                  </div>
+                  <i class="fa-solid fa-chevron-right"></i>
+                </li>
+
+                <a
+                  href="./notifications.html"
+                  class="text-decoration-none text-dark"
+                >
+                  <li
+                    class="list-group-item d-flex align-items-center justify-content-between"
+                    style="cursor: pointer"
+                  >
+                    <div class="d-flex align-items-center">
+                      <img
+                        src="./assets/images/Notifications1.png"
+                        class="me-3"
+                        style="width: 20px; height: 20px"
+                        alt="Notifications Icon"
+                      />
+                      Notifications
+                    </div>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </li>
+                </a>
+              </ul>
+            </div>
+
+            <div class="d-grid gap-2 mt-5">
+              <a
+                href="login.html"
+                class="btn btn-lg text-black fw-bold"
+                style="border: 1px solid #afafc7"
+                >Logout</a
+              >
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <!-- Offcanvas Bottom Modal -->
+    <div
+      class="offcanvas offcanvas-bottom offcanvas-bottom-custom"
+      tabindex="-1"
+      id="transactionModal"
+    >
+      <div class="offcanvas-body position-relative pt-4">
+        <!-- Close Button (top-right corner) -->
+        <button
+          type="button"
+          class="btn-close position-absolute top-0 end-0 m-3"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+
+        <div class="container">
+          <form>
+            <div class="mb-3">
+              <label class="form-label">Transaction Password</label>
+              <input
+                type="password"
+                class="form-control"
+                placeholder="Transaction Password"
+              />
+            </div>
+            <div class="d-grid mt-4">
+              <button type="submit" class="btn btn-submit btn-lg">
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Backdrop -->
+    <div
+      class="modal-backdrop-custom d-none"
+      id="modalBackdrop"
+      onclick="closeServicePopup()"
+    ></div>
+
+    <!-- Contact Us Popup -->
+    <div id="servicePopup" class="service-popup d-none">
+      <ul class="list-unstyled mb-2">
+        <li>
+          <a href="#">
+            <span class="label">
+              <img
+                src="./assets/images/service_popup/service_1.png"
+                alt="Telegram"
+                class="icon-img"
+              />
+              CS-2
+            </span>
+            <i class="fa fa-chevron-right arrow"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="label">
+              <img
+                src="./assets/images/service_popup/service_2.png"
+                alt="Telegram"
+                class="icon-img"
+              />
+              CS-26
+            </span>
+            <i class="fa fa-chevron-right arrow"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="label">
+              <img
+                src="./assets/images/service_popup/service_3.png"
+                alt="User"
+                class="icon-img"
+              />
+              CS-28
+            </span>
+            <i class="fa fa-chevron-right arrow"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="label">
+              <img
+                src="./assets/images/service_popup/service_4.png"
+                alt="User"
+                class="icon-img"
+              />
+              CS-51
+            </span>
+            <i class="fa fa-chevron-right arrow"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Cancel link -->
+    <div id="cancelContainer" class="cancel-container d-none">
+      <a
+        href="#"
+        id="cancelLink"
+        class="cancel-link"
+        onclick="closeServicePopup()"
+        >Cancel</a
+      >
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>

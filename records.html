@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Records</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body>
+  <div class="row w-100 d-flex flex-row justify-content-center align-items-center mx-auto">
+    <div class="col-lg-8 col-md-12 col-sm-12 col-12 p-0">
+      <main class="px-0 mx-auto">
+
+
+        <div class="header">
+          <img src="./assets/images/logo.png" alt="MetricTheory Logo" height="27" />
+          <div class="profile-icon">
+            <a href="./my.html">
+              <img src="./assets/images/records/profile.png" alt="profile photo" />
+            </a>
+          </div>
+        </div>
+
+        <div class="tabs">
+          <div class="tab active" onclick="filterTasks('all')">All</div>
+          <div class="tab" onclick="filterTasks('pending')">Pending</div>
+          <div class="tab" onclick="filterTasks('completed')">Completed</div>
+          <div class="tab" onclick="filterTasks('undone')">Undone</div>
+        </div>
+
+        <div class="card-container" id="taskContainer">
+          <div id="loading-message">Loading...</div>
+          <div id="no-data-message">No more data</div>
+
+          <div class="task-wrapper">
+  <div>
+    <span class="badge status-badge pending">Pending</span>
+    <span class="date text-muted" style="font-size: 14px;">2025-06-23 17:12:24</span>
+  </div>
+
+  <div class="task-card" data-status="pending">
+    <!-- Image + Title + Stars Row -->
+    <div class="d-flex flex-row">
+      <img src="./assets/images/records/record_1.png" alt="product"
+        style="width: 50px; height: auto; margin-right: 10px;" />
+
+      <div class="flex-grow-1">
+        <!-- Title -->
+        <div class="title text-muted responsive-title">
+          EU warehouse dropship folding fat tire electric bike
+        </div>
+
+        <!-- Price + Stars -->
+        <div class="d-flex justify-content-between align-items-center mt-1">
+          <div class="text-muted">USD 732.6</div>
+          <div class="d-md-none d-flex justify-content-end">
+                      <i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i
+                        class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i
+                        class="fas fa-star text-warning"></i>
+                    </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Amounts Grid -->
+    <div class="amounts-grid mt-2">
+      <div class="amount-block">
+        <div>Total Amount</div>
+        <div class="value">USD 732.6</div>
+      </div>
+      <div class="amount-block center">
+        <div>Commission</div>
+        <div class="value">USD 65.93</div>
+      </div>
+      <div class="amount-block right">
+        <button class="submit-btn">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+          <div class="task-wrapper">
+  <div>
+    <span class="badge status-badge completed">Completed</span>
+    <span class="date text-muted" style="font-size: 14px;">2025-06-23 17:11:48</span>
+  </div>
+
+  <div class="task-card" data-status="completed">
+    <!-- Image + Title + Stars Row -->
+    <div class="d-flex flex-row">
+      <img src="./assets/images/records/record_2.png" alt="product"
+        style="width: 50px; height: auto; margin-right: 10px;" />
+
+      <div class="flex-grow-1">
+        <!-- Title -->
+        <div class="title text-muted responsive-title">
+          All Weather Garden 4 Piece Silver Rust-Proof Aluminum Chat Set
+        </div>
+
+        <!-- Price + Stars -->
+        <div class="d-flex justify-content-between align-items-center mt-1">
+          <div class="text-muted">USD 934.7</div>
+          <div class="d-md-none d-flex justify-content-end">
+                      <i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i
+                        class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i
+                        class="fas fa-star text-warning"></i>
+                    </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Amounts Grid -->
+    <div class="amounts-grid mt-2">
+      <div class="amount-block">
+        <div>Total Amount</div>
+        <div class="value">USD 934.7</div>
+      </div>
+      <div class="amount-block center">
+        <div>Commission</div>
+        <div class="value">USD 5.61</div>
+      </div>
+      <div class="amount-block right"></div>
+    </div>
+  </div>
+</div>
+
+
+          <div class="task-wrapper">
+  <div>
+    <span class="badge status-badge red">Undone</span>
+    <span class="date text-muted" style="font-size: 14px;">2025-06-23 17:15:32</span>
+  </div>
+
+  <div class="task-card" data-status="undone">
+    <!-- Image + Title + Stars -->
+    <div class="d-flex flex-row">
+      <img src="./assets/images/records/record_3.png" alt="product"
+        style="width: 50px; height: auto; margin-right: 10px;" />
+
+      <div class="flex-grow-1">
+        <!-- Title -->
+        <div class="title text-muted responsive-title">
+          Hotel Furniture Design Room Bed Desk
+        </div>
+
+        <!-- Price + Stars -->
+        <div class="d-flex justify-content-between align-items-center mt-1">
+          <div class="text-muted">USD 588.0</div>
+         <div class="d-md-none d-flex justify-content-end">
+                      <i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i
+                        class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i
+                        class="fas fa-star text-warning"></i>
+                    </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Amounts -->
+    <div class="amounts-grid mt-2">
+      <div class="amount-block">
+        <div>Total Amount</div>
+        <div class="value">USD 588.0</div>
+      </div>
+      <div class="amount-block center">
+        <div>Commission</div>
+        <div class="value">USD 42.12</div>
+      </div>
+      <div class="amount-block right"></div>
+    </div>
+  </div>
+</div>
+
+
+           <div class="task-wrapper">
+  <div>
+    <span class="badge status-badge completed">Completed</span>
+    <span class="date text-muted" style="font-size: 14px;">2025-06-23 17:11:48</span>
+  </div>
+
+  <div class="task-card" data-status="completed">
+    <!-- Image + Title + Stars Row -->
+    <div class="d-flex flex-row">
+      <img src="./assets/images/records/record_2.png" alt="product"
+        style="width: 50px; height: auto; margin-right: 10px;" />
+
+      <div class="flex-grow-1">
+        <!-- Title -->
+        <div class="title text-muted responsive-title">
+          All Weather Garden 4 Piece Silver Rust-Proof Aluminum Chat Set
+        </div>
+
+        <!-- Price + Stars -->
+        <div class="d-flex justify-content-between align-items-center mt-1">
+          <div class="text-muted">USD 934.7</div>
+          <div class="d-md-none d-flex justify-content-end">
+                      <i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i
+                        class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i
+                        class="fas fa-star text-warning"></i>
+                    </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Amounts Grid -->
+    <div class="amounts-grid mt-2">
+      <div class="amount-block">
+        <div>Total Amount</div>
+        <div class="value">USD 934.7</div>
+      </div>
+      <div class="amount-block center">
+        <div>Commission</div>
+        <div class="value">USD 5.61</div>
+      </div>
+      <div class="amount-block right"></div>
+    </div>
+  </div>
+</div>
+
+          <div class="task-wrapper">
+            <div>
+              <span class="badge status-badge completed">Completed</span>
+              <span class="date text-muted" style="font-size: 14px;">2025-06-23 17:11:48</span>
+            </div>
+            <div class="task-card" data-status="completed">
+              <div class="d-flex flex-row">
+                <!-- Product Image -->
+                <img src="./assets/images/records/record_2.png" alt="product"
+                  style="width: 50px; height: auto; margin-right: 10px;" />
+
+                <!-- Content: Title + Price + Stars -->
+                <div class="flex-grow-1">
+                  <!-- Title -->
+                  <div class="title text-muted responsive-title">
+                    All Weather Garden 4 Piece Silver Rust-Proof Aluminum Chat Set
+                  </div>
+
+                  <!-- Price & Stars -->
+                  <div class="d-flex justify-content-between align-items-center mt-1">
+                    <div class="text-muted">USD 934.7</div>
+                    <div class="d-md-none d-flex justify-content-end">
+                      <i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i
+                        class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i
+                        class="fas fa-star text-warning"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Amounts Grid -->
+              <div class="amounts-grid mt-2">
+                <div class="amount-block">
+                  <div>Total Amount</div>
+                  <div class="value">USD 934.7</div>
+                </div>
+                <div class="amount-block center">
+                  <div>Commission</div>
+                  <div class="value">USD 5.61</div>
+                </div>
+                <div class="amount-block right"></div>
+              </div>
+            </div>
+          </div>
+
+
+           <div class="task-wrapper">
+  <div>
+    <span class="badge status-badge completed">Completed</span>
+    <span class="date text-muted" style="font-size: 14px;">2025-06-23 17:11:48</span>
+  </div>
+
+  <div class="task-card" data-status="completed">
+    <!-- Image + Title + Stars Row -->
+    <div class="d-flex flex-row">
+      <img src="./assets/images/records/record_2.png" alt="product"
+        style="width: 50px; height: auto; margin-right: 10px;" />
+
+      <div class="flex-grow-1">
+        <!-- Title -->
+        <div class="title text-muted responsive-title">
+          All Weather Garden 4 Piece Silver Rust-Proof Aluminum Chat Set
+        </div>
+
+        <!-- Price + Stars -->
+        <div class="d-flex justify-content-between align-items-center mt-1">
+          <div class="text-muted">USD 934.7</div>
+          <div class="d-md-none d-flex justify-content-end">
+                      <i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i
+                        class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i
+                        class="fas fa-star text-warning"></i>
+                    </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Amounts Grid -->
+    <div class="amounts-grid mt-2">
+      <div class="amount-block">
+        <div>Total Amount</div>
+        <div class="value">USD 934.7</div>
+      </div>
+      <div class="amount-block center">
+        <div>Commission</div>
+        <div class="value">USD 5.61</div>
+      </div>
+      <div class="amount-block right"></div>
+    </div>
+  </div>
+</div>
+
+           <div class="task-wrapper">
+  <div>
+    <span class="badge status-badge completed">Completed</span>
+    <span class="date text-muted" style="font-size: 14px;" >2025-06-23 17:11:48</span>
+  </div>
+
+  <div class="task-card" data-status="completed">
+    <!-- Image + Title + Stars Row -->
+    <div class="d-flex flex-row">
+      <img src="./assets/images/records/record_2.png" alt="product"
+        style="width: 50px; height: auto; margin-right: 10px;" />
+
+      <div class="flex-grow-1">
+        <!-- Title -->
+        <div class="title text-muted responsive-title">
+          All Weather Garden 4 Piece Silver Rust-Proof Aluminum Chat Set
+        </div>
+
+        <!-- Price + Stars -->
+        <div class="d-flex justify-content-between align-items-center mt-1">
+          <div class="text-muted">USD 934.7</div>
+          <div class="d-md-none d-flex justify-content-end">
+                      <i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i
+                        class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i
+                        class="fas fa-star text-warning"></i>
+                    </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Amounts Grid -->
+    <div class="amounts-grid mt-2">
+      <div class="amount-block">
+        <div>Total Amount</div>
+        <div class="value">USD 934.7</div>
+      </div>
+      <div class="amount-block center">
+        <div>Commission</div>
+        <div class="value">USD 5.61</div>
+      </div>
+      <div class="amount-block right"></div>
+    </div>
+  </div>
+</div>
+
+        </div>
+    </div>
+  </div>
+  <!-- Bottom Tab Bar -->
+  <div class="d-flex justify-content-around align-items-center bg-white fixed-bottom py-2 rounded-top shadow"
+    style="max-width: 1000px; margin: 0 auto">
+    <!-- Home (non-link, or wrap with <a href="#"> if desired) -->
+    <div class="tabbar-item active" role="button">
+      <a href="./index.html" style="text-decoration: none;">
+        <div class="tabbar-item-icon">
+          <img src="./assets/images/home_h.png" alt="Home" class="icon" />
+        </div>
+        <div class="tabbar-item-text">
+          <span>Home</span>
+        </div>
+      </a>
+    </div>
+
+    <!-- Starting -->
+    <a href="starting.html" class="tabbar-item text-decoration-none">
+      <div class="tabbar-item-icon">
+        <img src="./assets/images/starting1.png" alt="Starting" class="icon position-absolute rounded-circle"
+          style="bottom: 52%; width: 56px; height: auto;" />
+      </div>
+      <div class="tabbar-item-text">
+        <span>Starting</span>
+      </div>
+    </a>
+
+    <!-- Records -->
+    <a href="records.html" class="tabbar-item text-decoration-none">
+      <div class="tabbar-item-icon">
+        <img src="./assets/images/records.png" alt="Records" class="icon" />
+      </div>
+      <div class="tabbar-item-text">
+        <span>Records</span>
+      </div>
+    </a>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </main>
+
+  <!-- </div> -->
+
+  <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
