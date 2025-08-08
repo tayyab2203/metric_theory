@@ -1170,3 +1170,58 @@ body {
       background-color: #044191;
     }
   
+
+
+    .matching-overlay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(50, 50, 50, 0.9);
+  padding: 30px 50px;
+  border-radius: 20px;
+  text-align: center;
+  color: white;
+  z-index: 1050; /* higher than Bootstrap modals */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.spinner-circle {
+  width: 60px;
+  height: 60px;
+  border: 5px solid #fff;
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 15px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.task-message {
+  position: fixed;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  z-index: 1060;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.task-message.show {
+  opacity: 1;
+}
+
+.d-none {
+  display: none !important;
+}
