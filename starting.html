@@ -112,46 +112,85 @@
             </div>
 
             <!-- Start Button Grid -->
-            <div class="start-grid">
-              <div class="grid-cell">
-                <img src="./assets/images/starting/dummy.png" alt="Ad 1" />
-              </div>
-              <div class="grid-cell">
-                <img src="./assets/images/starting/dummy.png" alt="Ad 2" />
-              </div>
-              <div class="grid-cell">
-                <img src="./assets/images/starting/dummy.png" alt="Ad 3" />
-              </div>
-              <div class="grid-cell">
-                <img src="./assets/images/starting/dummy.png" alt="Ad 4" />
-              </div>
-
-              <!-- Centered Start Button -->
-              <!-- Offcanvas Modal triggered -->
-              <div class="center-btn text-center">
-                <button
-                  class="start-button btn"
-                  data-bs-toggle="offcanvas"
-                  data-bs-target="#transactionModal"
-                >
+             
+            <div class="container px-0">
+              <div class="row g-2 text-center">
+                <!-- Ad 1 -->
+                <div class="col-4">
                   <img
-                    src="./assets/images/starting/start-button.png"
-                    alt="Start"
+                    src="./assets/images/starting/dummy.png"
+                    alt="Ad 1"
+                    class="img-fluid rounded"
                   />
-                </button>
-              </div>
+                </div>
+                <!-- Ad 2 -->
+                <div class="col-4">
+                  <img
+                    src="./assets/images/starting/dummy.png"
+                    alt="Ad 2"
+                    class="img-fluid rounded"
+                  />
+                </div>
+                <!-- Ad 3 -->
+                <div class="col-4">
+                  <img
+                    src="./assets/images/starting/dummy.png"
+                    alt="Ad 3"
+                    class="img-fluid rounded"
+                  />
+                </div>
+                <!-- Ad 4 -->
+                <div class="col-4">
+                  <img
+                    src="./assets/images/starting/dummy.png"
+                    alt="Ad 4"
+                    class="img-fluid rounded"
+                  />
+                </div>
 
-              <div class="grid-cell">
-                <img src="./assets/images/starting/dummy.png" alt="Ad 5" />
-              </div>
-              <div class="grid-cell">
-                <img src="./assets/images/starting/dummy.png" alt="Ad 6" />
-              </div>
-              <div class="grid-cell">
-                <img src="./assets/images/starting/dummy.png" alt="Ad 7" />
-              </div>
-              <div class="grid-cell">
-                <img src="./assets/images/starting/dummy.png" alt="Ad 8" />
+                <!-- Center Start Button -->
+                <div class="col-4">
+                  <button class="btn p-0" id="matchBtn">
+                    <img
+                      src="./assets/images/starting/start-button.png"
+                      alt="Start"
+                      class="img-fluid"
+                    />
+                  </button>
+                </div>
+
+                <!-- Ad 5 -->
+                <div class="col-4">
+                  <img
+                    src="./assets/images/starting/dummy.png"
+                    alt="Ad 5"
+                    class="img-fluid rounded"
+                  />
+                </div>
+                <!-- Ad 6 -->
+                <div class="col-4">
+                  <img
+                    src="./assets/images/starting/dummy.png"
+                    alt="Ad 6"
+                    class="img-fluid rounded"
+                  />
+                </div>
+                <!-- Ad 7 -->
+                <div class="col-4">
+                  <img
+                    src="./assets/images/starting/dummy.png"
+                    alt="Ad 7"
+                    class="img-fluid rounded"
+                  />
+                </div>
+                <!-- Ad 8 -->
+                <div class="col-4">
+                  <img
+                    src="./assets/images/starting/dummy.png"
+                    alt="Ad 8"
+                    class="img-fluid rounded"
+                  />
+                </div>
               </div>
             </div>
 
@@ -344,8 +383,52 @@
         </div>
       </div>
     </div>
+    <!-- matching overlay -->
+    <div id="matchingOverlay" class="matching-overlay d-none">
+      <div class="spinner-circle"></div>
+      <p>Matching...</p>
+    </div>
+    <!-- Floating Message -->
+    <div id="taskTimeMessage" class="task-message d-none">
+      Not within the task creation time range
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      const matchBtn = document.getElementById("matchBtn");
+      const overlay = document.getElementById("matchingOverlay");
+      const taskMessage = document.getElementById("taskTimeMessage");
+
+      matchBtn.addEventListener("click", () => {
+        // 1. Show matching overlay
+        overlay.classList.remove("d-none");
+
+        setTimeout(() => {
+          // 2. Hide overlay
+          overlay.classList.add("d-none");
+
+          // 3. Show floating message
+          taskMessage.classList.remove("d-none");
+          taskMessage.classList.add("show");
+
+          // 4. Hide floating message after 2 seconds
+          setTimeout(() => {
+            taskMessage.classList.remove("show");
+            taskMessage.classList.add("d-none");
+
+            // 5. Show offcanvas/modal
+            const transactionModal = new bootstrap.Offcanvas(
+              "#transactionModal"
+            );
+            transactionModal.show();
+          }, 1000); // wait before modal
+        }, 1800); // overlay duration
+      });
+    </script>
 
     <!-- Bootstrap JS -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
